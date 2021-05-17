@@ -8,7 +8,51 @@
     <title>Home</title>
     <link rel="stylesheet" href="vicenglish-index.css">
 </head>
-<body>
+<body>   
+    <header class="header"> <!--flex. logo, nombre autor, titulo principal, navegación, boton busqueda  -->
+        <!-- skip navigation direct to content (link to main)-->    
+        <a href="#principal" class="sr-only header-item"><p class="skiptext">Ir al contenido principal</p> </a>
+        <div class="header-item">
+            <h1>aqui pondremos logo y titulo</h1>
+        </div>
+        <nav class="header-item">
+            <ul class="nav-list"> <!--vamos a hacer flex-->
+                <li class="nav-item">
+                    <a href="#" class="nav-item-link">Quien Soy</a>
+                    <div class="hide">
+                        <a href="#">Formación Universitaria y Posgrados</a>
+                        <a href="#">Carrera Profesional</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-item-link">Cursos/Clases</a>
+                    <div class="hide"> <!-- atencion hide!-->
+                        <a href="">Exámenes Internacionales</a>
+                        <a href="">Clases de Apoyo Escolar</a>
+                        <a href="">Apoyo a Alumnos del Profesorado</a>
+                        <a href="">Clases de Conversación</a>
+                        <a href="">Inglés con Fines Específicos</a>
+                        <a href="">Inglés General</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-item-link">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="#" class="nav-item-link">Recursos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="principal" class="principal"> 
+        
+            Acá tenemos el contenido del sitio
+            <a href="#">Ejemplo</a>
+            Más contenido
+    </main>
+    <footer class="footer" >
+        Acá tenemos el footer del sitio
+    </footer>
     
 </body>
 </html>

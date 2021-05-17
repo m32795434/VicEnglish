@@ -1,3 +1,111 @@
+:root {
+   --negro:#050000;
+   --cielo:#ACC8E5;
+   --verde:#79E089;
+   --rosa:#DDC4C4;
+
+}
+
+a{
+    font: 16px arial;
+}
+*:focus {
+    background: linear-gradient(var(--cielo) 50%, white);}
+
+/* ------------------------for screen readers only ----------------------*/
+.sr-only {
+    /* background-color: cyan; */
+    position: absolute!important;
+    height: 1px;
+    width:  1px;
+    overflow: hidden;
+    /* clip solo para position absolute o fixed*/
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+.sr-only:focus {
+    /* background-color: #ACC8E5; */
+    height: 60px;
+    width:  100%;
+    position: relative;
+    clip: auto;
+    margin-left: -4px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.sr-only:hover {
+    text-decoration: underline;
+}
+.skiptext{
+    text-align: center;
+    align-items: center;
+    color: black;
+}
+/* ------------------------for screen readers only ----------------------*/
+
+
 body{
-    background-color: aqua;
+    background-color: rgb(133, 60, 60);
+    margin: 0%;
+    padding: 0%;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+    }
+.header-item{
+        flex-grow: 1;
+    }
+.hide{
+    display: none;/*!!!!!!!!!!!!!!*/
+}
+
+.nav-list{
+    display: flex;
+    width: 100%;
+    min-width: 630px;
+    height: 5vw;
+    background-color: var(--rosa);
+    list-style: none;
+}
+.nav-item{
+    flex-grow: 1;
+    border-right: 1px dashed;
+    text-align: center;
+    align-self: center;
+}
+.nav-item-link{
+    text-decoration: none;
+}
+.nav-item-link:hover{
+    text-decoration: underline;
+}
+.nav-item-link:focus{
+border-radius: 20px;
+padding: 5% 10%;
+}
+.principal {
+    background-color: #e1f0d2;
+    position: absolute;
+    top: 30%;
+    height: 80vh;
+    width: 100%;
+    /* margin-bottom: 40px; */
+
+}
+
+.footer {
+    background-color: crimson;
+    position: absolute;
+    top: 120%;
+    height: 20vh;
+    width: 100%;
+    /* margin-bottom: 40px; no acepta, lo pisa absolute */
 }
