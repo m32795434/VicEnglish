@@ -9,23 +9,28 @@
     <link rel="stylesheet" href="vicenglish-index.css">
 </head>
 <body>   
-    <header class="header"> <!--flex. logo, nombre autor, titulo principal, navegación, boton busqueda  -->
+    <header class="header"--> <!--logo, nombre autor, titulo principal, navegación, boton busqueda  -->
         <!-- skip navigation direct to content (link to main)-->    
-        <a href="#principal" class="sr-only header-item"><p class="skiptext">Ir al contenido principal</p> </a>
-        <div class="header-item">
-            <h1>aqui pondremos logo y titulo</h1>
+        <a href="#main" class="sr-only"><p class="skiptext">Ir al contenido principal</p></a>
+        <div class="log-title-srch">
+            <a href="vicenglish-index.html" class="anchor-logo"><img src="images/big.png" alt="go to home" class="logo"></a>
+            <h1 class="title">VicEnglish</h1>
+            <form action="search.js" class="srch">
+                <input  type="search" placeholder="Buscar en el sitio...">
+                <button type="submit"><img src="images\gatito.jpg" alt="buscar" class="submit-srch"></button>
+            </form>
         </div>
-        <nav class="header-item">
+        <nav> <!--fue class="header-item nav">-->
             <ul class="nav-list"> <!--vamos a hacer flex-->
-                <li class="nav-item">
-                    <a href="#" class="nav-item-link">Quien Soy</a>
+                <li class="nav-list-item">
+                    <a href="#" class="nav-list-item-link">Quien Soy</a>
                     <div class="hide">
                         <a href="#">Formación Universitaria y Posgrados</a>
                         <a href="#">Carrera Profesional</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-item-link">Cursos/Clases</a>
+                <li class="nav-list-item">
+                    <a href="#" class="nav-list-item-link">Cursos/Clases</a>
                     <div class="hide"> <!-- atencion hide!-->
                         <a href="">Exámenes Internacionales</a>
                         <a href="">Clases de Apoyo Escolar</a>
@@ -35,16 +40,16 @@
                         <a href="">Inglés General</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-item-link">Contacto</a>
+                <li class="nav-list-item">
+                    <a href="#" class="nav-list-item-link">Contacto</a>
                     </li>
-                    <li class="nav-item">
-                    <a href="#" class="nav-item-link">Recursos</a>
+                    <li class="nav-list-item">
+                    <a href="#" class="nav-list-item-link">Recursos</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main id="principal" class="principal"> 
+    <main id="main" class="main"> 
         
             Acá tenemos el contenido del sitio
             <a href="#">Ejemplo</a>
