@@ -51,50 +51,104 @@ body{
     padding: 0%;
 }
 .header{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-content: stretch;
+    align-content: stretch; */
     position: fixed;
     top: 0;
     z-index: 1;
     width: 100%;
     box-sizing: border-box;
     }
-.header-item{
+
+/* .header-item{
         flex-grow: 1;
+    } */
+.log-title-srch{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: baseline;
+    height: 11vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* flex-wrap: nowrap; */
+    /* margin-bottom: 20px; */
     }
+
+.submit-srch{
+    max-height: 1vw;
+    margin: 0%;
+    padding: 0%;
+    flex-grow: 1;
+}
+/* .srch{
+    box-sizing: border-box;
+    padding-left: 20px;}  */
+
+.title{
+    text-align: center;
+    font-size: 9vw;
+    padding: 0%;
+    margin: 0%;
+    flex-grow: 1;
+    /* order: 1; */
+}
+/* .anchor-logo{
+    box-sizing: border-box;
+    overflow: hidden;
+    max-height: 1px;
+} */
+.logo{
+    height: 8vw;
+    margin-left: 5vw;
+    padding: 0%;
+    /* order: -1; */
+    /* flex-grow: 1; */
+}
+
 .hide{
     display: none;/*!!!!!!!!!!!!!!*/
 }
-
+nav{
+    padding: 0%;
+    margin: 0%;
+}
 .nav-list{
     display: flex;
+    box-sizing: border-box;
     width: 100%;
     min-width: 630px;
-    height: 5vw;
+    height: 4vw;
     background-color: var(--rosa);
     list-style: none;
+    overflow: hidden;
+    margin: 0%;
+    padding: 0%;
 }
-.nav-item{
+.nav-list-item{
     flex-grow: 1;
     border-right: 1px dashed;
     text-align: center;
     align-self: center;
-}
-.nav-item-link{
+    
+}   
+.nav-list-item-link{
     text-decoration: none;
 }
-.nav-item-link:hover{
+.nav-list-item-link:hover{
     text-decoration: underline;
 }
-.nav-item-link:focus{
+.nav-list-item-link:focus{
 border-radius: 20px;
 padding: 5% 10%;
-}
-.principal {
+font-size: 18px;
+} 
+.main {
     background-color: #e1f0d2;
     position: absolute;
-    top: 30%;
+    top: 15vw;
     height: 80vh;
     width: 100%;
     /* margin-bottom: 40px; */
@@ -109,3 +163,13 @@ padding: 5% 10%;
     width: 100%;
     /* margin-bottom: 40px; no acepta, lo pisa absolute */
 }
+
+/*1)por que en :focus, usando valores con vh al desbordar,se comprota distinto
+a desbordar con %. Deforma. "ocupa espacio libre" y corre elementos*/
+/*2)como puedo ocupar el 100% del elemento flex, con focus, sin desbordar?
+probé con overflow, pero aun así me sigue deformando elementos flex.
+3)mejor uso grid?
+4)anclando al "main"por ejemplo..., como hago para que al anclar, si tengo un header "fixed", este, 
+no me tape el contenido del main?es decir, que el "main" cargue mas abajo...debo armar otra pag?
+5)lupa: "submit-srch" voy bien?
+6)
