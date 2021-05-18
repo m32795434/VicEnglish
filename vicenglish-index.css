@@ -164,12 +164,26 @@ font-size: 18px;
     /* margin-bottom: 40px; no acepta, lo pisa absolute */
 }
 
-/*1)por que en :focus, usando valores con vh al desbordar,se comprota distinto
-a desbordar con %. Deforma. "ocupa espacio libre" y corre elementos*/
-/*2)como puedo ocupar el 100% del elemento flex, con focus, sin desbordar?
-probé con overflow, pero aun así me sigue deformando elementos flex.
-3)mejor uso grid?
-4)anclando al "main"por ejemplo..., como hago para que al anclar, si tengo un header "fixed", este, 
-no me tape el contenido del main?es decir, que el "main" cargue mas abajo...debo armar otra pag?
-5)lupa: "submit-srch" voy bien?
-6)
+/*1)por que en :focus, usando valores con vh, si hay desborde,se comporta distinto
+a desbordar con %. Deforma todo. "ocupa espacio libre" y corre elementos. LINEA 143
+
+2)como puedo ocupar el 100% del elemento flex, con focus, sin desbordar?
+probé con overflow, pero aun así me sigue deformando elementos flex. LINEA 143
+
+3)anclando al "main"por ejemplo...(en por ejemplo el "skip to main/skip navigation"), 
+como hago para que al anclar, si tengo un header "fixed", este, no me tape el contenido 
+del main? es decir, que el "main" cargue mas abajo cuando lo llamo. 
+Propiedad "Top" la tiene establecida. LINEA 148 Y 143.
+
+4)subir place holder al tipear..como se hace?LINEA 80
+
+5)al presionar "skip to main" como hago para que al aparecer el boton, el resto
+del contenido se mueva hacia abajo?es decir, que el boton "skip to main" no se superponga 
+a al titulo, logo, navegacion o lo que haya en al inicio de la pagina.LINEA 27
+
+6)hay forma de decrile a un elemento flex "hasta acá creces" (desde el padre)..es decir, 
+asignarle un espacio fijo, , y por mas que el flex-item crezca, con un "overflow" no se 
+muestre lo que rebalse, pero que NO DEFORME el resto del espacio disponible para los otros 
+elementos...(probé dandole al padre un "border-box", un heigth y width maximos pero nada me 
+funciona)
+7)lupa: "submit-srch" voy bien?*/
