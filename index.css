@@ -14,7 +14,6 @@ a{
 
 /* ------------------------for screen readers only ----------------------*/
 .sr-only {
-    /* background-color: cyan; */
     position: absolute!important;
     height: 1px;
     width:  1px;
@@ -26,11 +25,11 @@ a{
 }
 .sr-only:focus {
     /* background-color: #ACC8E5; */
-    height: 60px;
+    display: flex;
+    height: 4vw;
     width:  100%;
     position: relative;
     clip: auto;
-    margin-left: -4px;
     border-radius: 4px;
     text-decoration: none;
 }
@@ -39,33 +38,30 @@ a{
 }
 .skiptext{
     text-align: center;
-    align-items: center;
+    align-self: center;
     color: black;
+    flex-grow: 1;
 }
 /* ------------------------for screen readers only ----------------------*/
 
 
 body{
     background-color: rgb(133, 60, 60);
-    margin: 0%;
-    padding: 0%;
+    margin:1vw;
+    padding: 0;
 }
 .header{
-    /* display: flex;
-    flex-direction: column;
-    align-content: stretch; */
     position: fixed;
     top: 0;
     z-index: 1;
-    width: 100%;
+    width: 96.5vw;
     box-sizing: border-box;
+
     }
 
-/* .header-item{
-        flex-grow: 1;
-    } */
+
 .log-title-srch{
-    background-color: aqua;
+    background-color: rgb(24, 20, 231);
     display: flex;
     justify-content: space-between;
     align-content: stretch;
@@ -82,6 +78,11 @@ body{
     margin: 0%;
     padding: 0%;
     flex-grow: 1;
+    background: none;
+    border: none;
+}
+.submit-srch-img{
+    width: 5vw;
 }
 /* .srch{
     box-sizing: border-box;
@@ -126,6 +127,7 @@ nav{
     overflow: hidden;
     margin: 0%;
     padding: 0%;
+    /* position: sticky; probarrrrrrrrrrrrr*/
 }
 .nav-list-item{
     flex-grow: 1;
@@ -136,6 +138,7 @@ nav{
 }   
 .nav-list-item-link{
     text-decoration: none;
+    /* display: block; con esto ocuparía todo el espacio disponible el focus, pero no me gusta*/
 }
 .nav-list-item-link:hover{
     text-decoration: underline;
@@ -147,43 +150,26 @@ font-size: 18px;
 } 
 .main {
     background-color: #e1f0d2;
-    position: absolute;
+    position: relative;/*hacer relative para no afectar la posicion de otros elemetos*/
     top: 15vw;
-    height: 80vh;
-    width: 100%;
-    /* margin-bottom: 40px; */
+    height: 80vw;
+    width: 96.5vw;
+    margin-bottom: 40px;
 
 }
 
 .footer {
     background-color: crimson;
-    position: absolute;
-    top: 120%;
-    height: 20vh;
-    width: 100%;
-    /* margin-bottom: 40px; no acepta, lo pisa absolute */
+    position: relative;/*conviene relative! sino me saca del flujo del doc*/
+    top: 15vw;
+    height: 15vw;
+    width: 96.5vw;
+    /*margin-bottom: 20px; no acepta, lo pisa absolute*/
 }
 
 /*1)por que en :focus, usando valores con vh, si hay desborde,se comporta distinto
 a desbordar con %. Deforma todo. "ocupa espacio libre" y corre elementos. LINEA 143
 
-2)como puedo ocupar el 100% del elemento flex, con focus, sin desbordar?
-probé con overflow, pero aun así me sigue deformando elementos flex. LINEA 143
-
-3)anclando al "main"por ejemplo...(en por ejemplo el "skip to main/skip navigation"), 
-como hago para que al anclar, si tengo un header "fixed", este, no me tape el contenido 
-del main? es decir, que el "main" cargue mas abajo cuando lo llamo. 
-Propiedad "Top" la tiene establecida. LINEA 148 Y 143.
-
 4)subir place holder al tipear..como se hace?LINEA 80
 
-5)al presionar "skip to main" como hago para que al aparecer el boton, el resto
-del contenido se mueva hacia abajo?es decir, que el boton "skip to main" no se superponga 
-a al titulo, logo, navegacion o lo que haya en al inicio de la pagina.LINEA 27
-
-6)hay forma de decrile a un elemento flex "hasta acá creces" (desde el padre)..es decir, 
-asignarle un espacio fijo, , y por mas que el flex-item crezca, con un "overflow" no se 
-muestre lo que rebalse, pero que NO DEFORME el resto del espacio disponible para los otros 
-elementos...(probé dandole al padre un "border-box", un heigth y width maximos pero nada me 
-funciona)
 7)lupa: "submit-srch" voy bien?*/
