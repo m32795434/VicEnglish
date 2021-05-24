@@ -1,18 +1,21 @@
 :root {
-   --negro:#050000;
+   
    --cielo:#ACC8E5;
    --verde:#79E089;
    --rosa:#DDC4C4;
+   --azul:#093048;
+   --rojo: #9b0219;
+   --gris:#bebebe;
 
 }
 
 a{
-    font: 16px arial;
+    font: 1.5vw arial;
 }
 *:focus {
     background: linear-gradient(var(--cielo) 50%, white);}
 
-/* ------------------------for screen readers only ----------------------*/
+/* ------------------------ screen readers only ----------------------*/
 .sr-only {
     position: absolute!important;
     height: 1px;
@@ -42,11 +45,10 @@ a{
     color: black;
     flex-grow: 1;
 }
-/* ------------------------for screen readers only ----------------------*/
-
+/* ------------------------END screen readers only ----------------------*/
 
 body{
-    background-color: rgb(133, 60, 60);
+    /* background-color: rgb(133, 60, 60); */
     margin:1vw;
     padding: 0;
 }
@@ -58,60 +60,69 @@ body{
     box-sizing: border-box;
 
     }
+/*-------------------------LOGO-TITLE-AUTHOR-SEARCH--------------------*/
 
-
-.log-title-srch{
-    background-color: rgb(24, 20, 231);
+.log-title-srch{/*FLEX CONTENEDOR DEL LOGO, TIT, Y FORM SEARCH*/
+    background: linear-gradient(.25turn, var(--azul)70%, white);
     display: flex;
     justify-content: space-between;
     align-content: stretch;
-    align-items: baseline;
-    height: 11vw;
+    align-items: flex-end;
+    height: 8.5vw;
     box-sizing: border-box;
     overflow: hidden;
-    /* flex-wrap: nowrap; */
-    /* margin-bottom: 20px; */
     }
-
-.submit-srch{
-    max-height: 1vw;
-    margin: 0%;
-    padding: 0%;
-    flex-grow: 1;
-    background: none;
-    border: none;
-}
-.submit-srch-img{
-    width: 5vw;
-}
-/* .srch{
-    box-sizing: border-box;
-    padding-left: 20px;}  */
-
-.title{
-    text-align: center;
-    font-size: 9vw;
-    padding: 0%;
-    margin: 0%;
-    flex-grow: 1;
-    /* order: 1; */
-}
-/* .anchor-logo{
+/*----------LOGO--------------*/
+/* .logo-anchor{
     box-sizing: border-box;
     overflow: hidden;
     max-height: 1px;
 } */
-.logo{
+
+.logo-image{
     height: 8vw;
-    margin-left: 5vw;
     padding: 0%;
-    /* order: -1; */
-    /* flex-grow: 1; */
+}
+/*------------END LOGO--------------*/
+/*------------TITLE----------------*/
+.title{/*div contenedor de h1 y h2*/
+    display: flex;
+    padding: 0%;
+    margin: 0%;
+    color: white;
+}
+.title h1{
+    font: 3vw "Libre Baskerville", cursive;
+}
+.title h2{ 
+    font-size:2vw;
+    margin-left: 1vw;
+}
+/*------------END TITLE------------*/
+/*------------SEARCH FORM--------*/
+
+.input-search{
+    width: 20vw;
+    height: 3vw;
+    display: inline-block;
+    border: 3px solid black;
+    border-radius: 5px;
+    font-size: 2vw;
+    /* background-color: wheat; */
 }
 
-.hide{
-    display: none;/*!!!!!!!!!!!!!!*/
+.button-search{
+    background: none;
+    border: none;
 }
+.button-search-img{
+    width: 2vw;
+    cursor: pointer;
+}
+/*-----------END SEARCH FORM--------*/
+
+/*-------------------------END LOGO-TITLE-AUTHOR-SEARCH--------------------*/
+
 nav{
     padding: 0%;
     margin: 0%;
@@ -124,30 +135,78 @@ nav{
     height: 4vw;
     background-color: var(--rosa);
     list-style: none;
-    overflow: hidden;
     margin: 0%;
     padding: 0%;
-    /* position: sticky; probarrrrrrrrrrrrr*/
 }
 .nav-list-item{
+    position: relative;
     flex-grow: 1;
     border-right: 1px dashed;
     text-align: center;
     align-self: center;
     
 }   
+
 .nav-list-item-link{
     text-decoration: none;
+    color: black;
     /* display: block; con esto ocuparía todo el espacio disponible el focus, pero no me gusta*/
 }
 .nav-list-item-link:hover{
     text-decoration: underline;
+    /* transition: all .3s; */
 }
 .nav-list-item-link:focus{
 border-radius: 20px;
 padding: 5% 10%;
-font-size: 18px;
+font-size: 1.3vw;
 } 
+
+.submenu{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+    width: 120%;/*nav-list tmb se mueve en % de su padre*/
+    position: absolute;
+    background-color:var(--azul);
+    z-index: 2;
+    
+}
+.nav-list-item:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+.nav-list-item-link:focus .submenu{/*--------------NO FUNCIONA! ------------*/
+    visibility: visible;
+    opacity: 1;
+}
+
+.submenu-list-item{
+height: 4vw;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+border-bottom: thick double black;
+}
+
+.submenu-list-item-link{
+    color: white;
+    text-decoration: none;
+    
+}
+.submenu-list-item-link:hover{
+    text-decoration: underline;
+}
+.submenu-list-item-link:focus{
+    border-radius: 20px;
+    padding: 5% 10%;
+    font-size: 1.3vw;
+    color: black;
+}
 .main {
     background-color: #e1f0d2;
     position: relative;/*hacer relative para no afectar la posicion de otros elemetos*/
@@ -170,6 +229,12 @@ font-size: 18px;
 /*1)por que en :focus, usando valores con vh, si hay desborde,se comporta distinto
 a desbordar con %. Deforma todo. "ocupa espacio libre" y corre elementos. LINEA 143
 
-4)subir place holder al tipear..como se hace?LINEA 80
+2)subir place holder al tipear..como se hace?LINEA 80
 
-7)lupa: "submit-srch" voy bien?*/
+3) Input-search: no puedo cambiarle color fondo (gradiente)cuando clickeo. ¿con una class sobre form?
+
+4).nav-list-item-link:focus .submenu{ -----------NO FUNCIONA!
+    visibility: visible;
+    opacity: 1;
+}
+*/
