@@ -4,7 +4,7 @@
    --verde:#79E089;
    --rosa:#DDC4C4;
    --azul:#093048;
-   --rojo: #9b0219;
+   --rojo: #a8011b;
    --gris:#bebebe;
 
 }
@@ -48,9 +48,10 @@ a{
 /* ------------------------END screen readers only ----------------------*/
 
 body{
-    /* background-color: rgb(133, 60, 60); */
+    background-color:var(--rojo);
     margin:1vw;
     padding: 0;
+    padding-bottom: 15vw; /*compensa el TOP:15VW de MAIN Y FOOTER*/
 }
 .header{
     position: fixed;
@@ -92,10 +93,12 @@ body{
     color: white;
 }
 .title h1{
-    font: 3vw "Libre Baskerville", cursive;
+    font-size: 3vw;
+    
 }
 .title h2{ 
     font-size:2vw;
+    font-family: "Dancing Script", cursive;
     margin-left: 1vw;
 }
 /*------------END TITLE------------*/
@@ -211,19 +214,86 @@ border-bottom: thick double black;
     background-color: #e1f0d2;
     position: relative;/*hacer relative para no afectar la posicion de otros elemetos*/
     top: 15vw;
-    height: 80vw;
+    height: auto;
     width: 96.5vw;
     margin-bottom: 40px;
+    z-index: 0;
+}
+/*-------------------------SCROLL------------------------------*/
+#block-img1 {
+    /*position: 0%left, 0% top/background-attachment:fixed;/
+    background-image:url(01.jpeg);// podría tmb definir valores para 
+background-clip/background-color/background-origin/background-repeat*/
+    background: url(images/01.jpg) fixed;
+    background-size:cover;
+    min-height: 900px;
+    width: 100%;
+    /* margin: 0 auto; */
+}
+
+#block-img2{
+    background: url(images/02.jpg) fixed;
+    background-size: cover;
+    min-height: 900px;
+    width: 100%;
+}
+
+#block-img3{
+    background: url(images/03.jpg) fixed;
+    background-size: cover;
+    min-height: 900px;
+    width: 100%;
+}
+
+.block1{
+    background-color: black;
+    margin-bottom: 5vw;
+
 
 }
+.block2{/*para divs padres que contienen los div hijos, con h2 y p, asi puedo 
+    hacerle padding, desde el div hijo*/
+    background-color: black;
+    margin-bottom: 5vw;
+    /* opacity: 10%; NO PUEDO SIN AFECTAR AL PARRAFOOOOOOO SOCORRRO*/
+}
+
+.text {/*para el div hijo, de la clase de abajo*/
+    color: var(--cielo);
+    text-align: center;
+    padding: 5vw;
+    font-size: 2vw;
+}
+
+.text h1{
+    color: burlywood;
+    font-size: 4vw;
+    text-shadow: 1px 1px 1px white;/* offset-x | offset-y | blur-radius | color */
+    margin-top: 0;
+    background-color: black;
+    border-radius: 5px;
+    opacity: 80%;
+
+    }
+
+.text h2{
+    color: burlywood;
+    font-size: 4vw;
+    text-shadow: 1px 1px 1px white;/* offset-x | offset-y | blur-radius | color */
+    margin-top: 0;
+    background-color: black;
+    opacity: 80%;
+    }
+
+
 
 .footer {
     background-color: crimson;
     position: relative;/*conviene relative! sino me saca del flujo del doc*/
     top: 15vw;
-    height: 15vw;
+    height: 20vw;
     width: 96.5vw;
-    /*margin-bottom: 20px; no acepta, lo pisa absolute*/
+    margin-bottom: 10px; 
 }
 
 /*1)por que en :focus, usando valores con vh, si hay desborde,se comporta distinto
@@ -237,4 +307,5 @@ a desbordar con %. Deforma todo. "ocupa espacio libre" y corre elementos. LINEA 
     visibility: visible;
     opacity: 1;
 }
+5) NO PUEDO APLICAR OPACITY SOBRE BLOCKS SIN AFECTAR A LOS TEXTOS.
 */
