@@ -246,20 +246,18 @@ background-clip/background-color/background-origin/background-repeat*/
 }
 
 .block1{
-    background-color: black;
+    background-color: rgba(0,0,0,0.7);
     margin-bottom: 5vw;
-
 
 }
 .block2{/*para divs padres que contienen los div hijos, con h2 y p, asi puedo 
     hacerle padding, desde el div hijo*/
-    background-color: black;
+    background-color: rgba(0,0,0,0.7);
     margin-bottom: 5vw;
-    /* opacity: 10%; NO PUEDO SIN AFECTAR AL PARRAFOOOOOOO SOCORRRO*/
 }
 
 .text {/*para el div hijo, de la clase de abajo*/
-    color: var(--cielo);
+    color: white;
     text-align: center;
     padding: 5vw;
     font-size: 2vw;
@@ -270,10 +268,9 @@ background-clip/background-color/background-origin/background-repeat*/
     font-size: 4vw;
     text-shadow: 1px 1px 1px white;/* offset-x | offset-y | blur-radius | color */
     margin-top: 0;
-    background-color: black;
     border-radius: 5px;
+    background-color: rgba(0,0,0);
     opacity: 80%;
-
     }
 
 .text h2{
@@ -281,20 +278,61 @@ background-clip/background-color/background-origin/background-repeat*/
     font-size: 4vw;
     text-shadow: 1px 1px 1px white;/* offset-x | offset-y | blur-radius | color */
     margin-top: 0;
-    background-color: black;
     opacity: 80%;
     }
 
-
-
+/*------------------END SCROLL-------------------------*/   
+/*------------------FOOTER-----------------------------*/  
 .footer {
-    background-color: crimson;
+    border: double thick rgb(3, 3, 3);
+    /* background-color: var(--cielo); */
     position: relative;/*conviene relative! sino me saca del flujo del doc*/
     top: 15vw;
-    height: 20vw;
+    height: 15vw;
     width: 96.5vw;
-    margin-bottom: 10px; 
+    /* margin-bottom: 100px;  */
+    display: grid;
+    grid-template: 50% 50%/ 50% 50%;
+    box-sizing: border-box;
+    }
+.footer-copy{
+    color: white;
+    font-size: 2vw;
+    }
+.footer-contac, .footer-follow{
+    align-self: center;
+    justify-self: center;
+    }
+
+.follow-facebook, .follow-linkedin{
+border-radius: 12px;
 }
+.footer-credits{
+    justify-self: right;
+    align-self: end;
+    display: flex;
+    color: white;
+    font-size: 1vw;
+    /* background-color: greenyellow; */
+}
+.footer-credits p{
+    margin: 1vw 0 0 1vw;
+    font-size: 2vw;
+    font-family: "Dancing Script", cursive;
+
+}
+.footer-contac a, .footer-follow p{
+    text-align: center;
+    color: white;
+    font-size: 2vw;
+    font-family: serif;
+    margin: 0 0 .5vw 0;
+}
+.footer-follow img{
+width: 4vw;
+}
+
+/*-------------------END FOOTER--------------------*/
 
 /*1)por que en :focus, usando valores con vh, si hay desborde,se comporta distinto
 a desbordar con %. Deforma todo. "ocupa espacio libre" y corre elementos. LINEA 143
@@ -307,5 +345,4 @@ a desbordar con %. Deforma todo. "ocupa espacio libre" y corre elementos. LINEA 
     visibility: visible;
     opacity: 1;
 }
-5) NO PUEDO APLICAR OPACITY SOBRE BLOCKS SIN AFECTAR A LOS TEXTOS.
 */
