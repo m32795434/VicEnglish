@@ -182,7 +182,7 @@ font-size: 1.3vw;
     visibility: visible;
     opacity: 1;
 }
-.nav-list-item-link:focus .submenu{/*--------------NO FUNCIONA! ------------*/
+.nav-list-item:focus .submenu{/*--------------NO FUNCIONA! ------------*/
     visibility: visible;
     opacity: 1;
 }
@@ -219,7 +219,7 @@ border-bottom: thick double black;
     margin-bottom: 40px;
     z-index: 0;
 }
-/*-------------------------SCROLL------------------------------*/
+/*----------------------------------------------SCROLL------------------------------*/
 #block-img1 {
     /*position: 0%left, 0% top/background-attachment:fixed;/
     background-image:url(01.jpeg);// podría tmb definir valores para 
@@ -281,58 +281,64 @@ background-clip/background-color/background-origin/background-repeat*/
     opacity: 80%;
     }
 
-/*------------------END SCROLL-------------------------*/   
-/*------------------FOOTER-----------------------------*/  
+/*-------------------------------------------END SCROLL-------------------------*/   
+/*--------------------------------------------FOOTER-----------------------------*/  
 .footer {
     border: double thick rgb(3, 3, 3);
-    /* background-color: var(--cielo); */
     position: relative;/*conviene relative! sino me saca del flujo del doc*/
     top: 15vw;
-    height: 15vw;
+    height: auto;
     width: 96.5vw;
     /* margin-bottom: 100px;  */
     display: grid;
-    grid-template: 50% 50%/ 50% 50%;
+    grid-template: auto / 40% 20% 40%;
     box-sizing: border-box;
     }
 .footer-copy{
     color: white;
-    font-size: 2vw;
-    }
-.footer-contac, .footer-follow{
-    align-self: center;
-    justify-self: center;
+    font-size: 20px;
     }
 
-.follow-facebook, .follow-linkedin{
-border-radius: 12px;
-}
-.footer-credits{
-    justify-self: right;
-    align-self: end;
+.footer-contact{
     display: flex;
-    color: white;
-    font-size: 1vw;
-    /* background-color: greenyellow; */
-}
-.footer-credits p{
-    margin: 1vw 0 0 1vw;
-    font-size: 2vw;
-    font-family: "Dancing Script", cursive;
-
-}
-.footer-contac a, .footer-follow p{
+    flex-direction: column;
     text-align: center;
+}
+.footer-contact a, .footer-follow p{
+    /* text-align: center; ya heredada para ambos elementos*/
     color: white;
-    font-size: 2vw;
+    font-size: 20px;
     font-family: serif;
     margin: 0 0 .5vw 0;
 }
+.footer-contact a:hover{
+    color: black;
+    border: 1px solid white;
+    font-size: 22px;
+}
+.follow-facebook, .follow-linkedin{
+    border-radius: 12px;
+}
 .footer-follow img{
 width: 4vw;
+height: auto;
 }
 
-/*-------------------END FOOTER--------------------*/
+.footer-credits{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: white;
+    font-size: 8px;
+}
+.footer-credits p {
+    margin: 1% 0 0 2%;
+    font-size: 21px;
+    font-family: "Dancing Script", cursive;
+}
+
+
+/*-------------------------------------END FOOTER---------------------------------------*/
 
 /*1)por que en :focus, usando valores con vh, si hay desborde,se comporta distinto
 a desbordar con %. Deforma todo. "ocupa espacio libre" y corre elementos. LINEA 143
@@ -345,4 +351,5 @@ a desbordar con %. Deforma todo. "ocupa espacio libre" y corre elementos. LINEA 
     visibility: visible;
     opacity: 1;
 }
+5) clip-path probar
 */
