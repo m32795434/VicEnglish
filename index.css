@@ -171,7 +171,7 @@ font-size: 1.3vw;
     visibility: visible;
     opacity: 1;
 }
-.nav-list-item-link:active .submenu{/*--------------NO FUNCIONA! ------------*/
+.nav-list-item:focus-within .submenu{
     visibility: visible;
     opacity: 1;
 }
