@@ -227,6 +227,14 @@ background-clip/background-color/background-origin/background-repeat*/
     width: 100%;
 }
 
+#text-contact {/*si gusta "center", elimino esto*/
+    text-align: center;
+}
+#block1-contact{
+    background-color: rgba(0,0,0,0.9);
+    margin-bottom: 5vw;
+}
+
 #block-img3{
     background: url(images/03.jpg) fixed;
     background-size: cover;
@@ -329,6 +337,12 @@ height: auto;
 
 /*-------------------------------------END FOOTER---------------------------------------*/
 
+/*---------------------------CONTACT------------------------------------------------*/
+.block-contact{
+    display: block;
+}
+
+
 /*----------------------------------MEDIASSSSSSSSSQQQQQ----------------------------*/
 /*-------------------PC HIGH END PARA FUTURO CERCANO----------*/
 @media (max-width:1200px){
@@ -409,9 +423,5 @@ a desbordar con %. Deforma todo. "ocupa espacio libre" y corre elementos. LINEA 
 
 3) Input-search: no puedo cambiarle color fondo (gradiente)cuando clickeo. ¿con una class sobre form?
 
-4).nav-list-item-link:focus .submenu{ -----------NO FUNCIONA!
-    visibility: visible;
-    opacity: 1;
-}
 5) clip-path probar
 */

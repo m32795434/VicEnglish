@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Contacto</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" rel="stylesheet"> 
     <link rel="stylesheet" href="index.css">
@@ -29,11 +29,11 @@
         <nav> <!---->
             <ul class="nav-list"> <!--flex NAVEGACIÓN-->
                 <li class="nav-list-item">
-                    <a href="about-me.html" class="nav-list-item-link">Sobre Mí</a>
+                    <a href="about-me.html" class="nav-list-item-link">Acerca de Mí</a>
                     <ul class="submenu">
-                        <li class="submenu-list-item"><a href="about-me.html#whoiam" class="submenu-list-item-link">¿Quien Soy?</a></li>
-                        <li class="submenu-list-item"><a href="about-me.html#training" class="submenu-list-item-link">Formación Universitaria y Posgrados</a></li>
-                        <li class="submenu-list-item"><a href="about-me.html#career" class="submenu-list-item-link">Carrera Profesional</a></li>
+                        <li class="submenu-list-item"><a href="#whoiam" class="submenu-list-item-link">¿Quien Soy?</a></li>
+                        <li class="submenu-list-item"><a href="#training" class="submenu-list-item-link">Formación Universitaria y Posgrados</a></li>
+                        <li class="submenu-list-item"><a href="#career" class="submenu-list-item-link">Carrera Profesional</a></li>
                     </ul>
                 </li>
                 <li class="nav-list-item">
@@ -58,78 +58,64 @@
     </header>
     <main id="main" class="main"> 
         <!--MODELO SCROLL CORTESÍA DE UNA COMPAÑERA TURNO MAÑÁNA-->
-        <div id="block-img1" data-speed="1"><!--AQUI IMAGEN 1 FIJA + SCROLL TITULO PRINCIPAL-->
-            <div class="text"> 
-                <h1>¿POR QUÉ ESTUDIAR INGLÉS?</h1>
-            </div>
-            <div class="block1"><!---->
-                <div class="text">
-                    <h2>Motivo-titulo-1</h2>
-                    <p>
-                        Harry Potter se ha quedado huérfano y vive en casa de sus abominables
-                        tíos y del insoportable primo Dudley. Harry se siente muy triste y solo,
-                        hasta que un buen día recibe una carta que cambiará su vida para 
-                        siempre.  
-                    </p>
-                </div>
-            </div>
-        </div><!--FIN BLOQUE IMAGEN 1-->
-
-        
-
         <div id="block-img2" data-speed="1" >
-            <div class="block1"> 
-                <div class="text">
-                    <h2>Motivo-titulo-2</h2>
-                    <p>
-                        A partir de ese
-                        momento, la suerte de Harry da un vuelco espectacular. En esa escuela
-                        tan especial aprenderá encantamientos, trucos fabulosos y tácticas de
-                        defensa contra las malas artes. 
-                    </p>
-                
+            <div class="block1" id="block1-contact"> 
+                <div class="text" id="text-contact">
+                    <h2>Contacto</h2>
+                    <form action="ejemplo.js">
+
+                        <label class="block-contact">
+                            Nombre:
+                            <input type="text" placeholder="Ingrese aquí su nombre">
+                        </label>
+                        <label class="block-contact">
+                            E-mail:
+                            <input type="email">
+                        </label>
+                        <label class="block-contact">
+                            Edad:
+                            <input type="number" min="0" max="100">
+                        </label>
+                        <label class="block-contact">
+                            País:
+                            <input type="text" list="paises">
+                            <datalist id="paises">
+                                <option>Argentina</option>
+                                <option>Colombia</option>
+                                <option>Perú</option>
+                                <option>Ecuador</option>
+                                <option>Brasil</option>
+                                <option>España</option>
+                                <option>Estados Unidos</option>
+                                <option>Belgica</option>
+                                <option>Portugal</option>
+                                <option>Italia</option>
+                                <option>Canada</option>
+                                <option>Inglaterra</option>
+                                <option>Uruguay</option>
+                                <option>Otro</option>
+                            </datalist>
+                        </label>
+                        <label class="block-contact">
+                            Comentarios:
+                            <textarea class="textarea1"></textarea>
+                        </label>
+                        <input type="submit" value="¡Enviar!">
+                        <input type="reset" value="Resetear">
+
+                    </form>
+                    <!--Cortesía http://www.jordigonzalezboada.com/w3mentor/tema05.php-->
+                    <a href="mailto:vico.mg.gonzalez@gmail.com?
+subject=Consulta%20Clases%20de%20Inglés
+&body=Hola%20Vicky%20buenas%20tardes
+&cc=micorreo2@dominio.com
+&bcc=micorreo3@dominio.com">¡O también podés enviarnos un mail!</a>
                 </div>
             </div>
-            <div class="block2">
-                        <div class="text">
-                            <h2>Motivo-titulo-3</h2>
-                            <p>
-                                Se convertirá en el campeón escolar de
-                                quidditch, especie de fútbol aéreo que se juega montado sobre escobas,
-                                y se hará un puñado de buenos amigos... aunque también algunos
-                                temibles enemigos. 
-                            </p>
-                        </div>
-            </div>
+            
         </div>
 
-    
-        <div id="block-img3" data-speed="1" >
-            <div class="block1"> 
-                <div class="text">
-                    <h2>Motivo-titulo-4</h2>
-                    <p>
-                        Pero sobre todo, conocerá los secretos que le
-                        permitirán cumplir con su destino. Pues, aunque no lo parezca a primera 
-                        vista, Harry no es un chico común y corriente. ¡Es un mago!
-
-                    </p>
-                </div>
-            </div>
-            <div class="block2"> 
-                <div class="text">
-                    <h2>Motivo-titulo-5</h2>
-                    <p>
-                        El señor y la señora Dursley, que vivían en el número 4 de Privet Drive,
-                        estaban orgullosos de decir que eran muy normales, afortunadamente. Eran las 
-                        últimas personas que se esperaría encontrar relacionadas con algo extraño o
-                        misterioso, porque no estaban para tales tonterías.
-                    </p>
-                </div>
-            </div>
-        </div>  
-        
-        
+         
     </main>
     <footer class="footer">
         <div class="footer-copy">
