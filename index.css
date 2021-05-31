@@ -227,13 +227,6 @@ background-clip/background-color/background-origin/background-repeat*/
     width: 100%;
 }
 
-#text-contact {/*si gusta "center", elimino esto*/
-    text-align: center;
-}
-#block1-contact{
-    background-color: rgba(0,0,0,0.9);
-    margin-bottom: 5vw;
-}
 
 #block-img3{
     background: url(images/03.jpg) fixed;
@@ -242,16 +235,13 @@ background-clip/background-color/background-origin/background-repeat*/
     width: 100%;
 }
 
-.block1{
+.block1{/*para divs padres que contienen los div hijos, con h2 y p, asi puedo 
+    hacerle padding, desde el div hijo*/
     background-color: rgba(0,0,0,0.7);
     margin-bottom: 5vw;
 
 }
-.block2{/*para divs padres que contienen los div hijos, con h2 y p, asi puedo 
-    hacerle padding, desde el div hijo*/
-    background-color: rgba(0,0,0,0.7);
-    margin-bottom: 5vw;
-}
+
 
 .text {/*para el div hijo, de la clase de abajo*/
     color: white;
@@ -309,15 +299,15 @@ background-clip/background-color/background-origin/background-repeat*/
     margin: 0 0 .5vw 0;
 }
 .footer-contact a:hover{
-    color: black;
     border: 1px solid white;
-    font-size: 22px;
+    font-size: 25px;
+    border-radius: 5px;
 }
 .follow-facebook, .follow-linkedin{
     border-radius: 12px;
 }
 .footer-follow img{
-width: 4vw;
+width: 40px;
 height: auto;
 }
 
@@ -338,8 +328,60 @@ height: auto;
 /*-------------------------------------END FOOTER---------------------------------------*/
 
 /*---------------------------CONTACT------------------------------------------------*/
-.block-contact{
+
+.contact-text {
+    text-align: left;
+    color: white;
+    padding: 5vw;
+    font-size: 25px;
+}
+.contact-text h2{
+    background-color: var(--rojo);
+    border-bottom:thick double white;
+    border-radius: 20px;
+    text-align: center;
+    color: burlywood;
+    font-size: 45px;
+    text-shadow: 1px 1px 1px white;/* offset-x | offset-y | blur-radius | color */
+    opacity: 80%;
+}
+.contact-block1{
+    background-color: rgba(0,0,0,0.9);
+    margin-bottom: 5vw;
+}
+.contact-items{
     display: block;
+    margin-bottom: 2.5vw;
+    border-radius: 1vw;
+}
+#coment{
+    width: 50vw;
+    height: 15vw;
+}
+
+.contact-large{
+    width: 25vw;
+    min-width: 147px;
+}
+.buttoms-contact{
+    border-radius: 10px;
+    background-color: var(--rojo);
+    color: white;
+    font-size: 20px;
+}
+.buttoms-contact:hover{
+    font-size: 25px;
+}
+.contact-text a{
+    border-radius: 10px;
+    background-color: var(--rojo);
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    border:1px solid white;
+}
+.contact-text a:hover{
+    font-size: 25px;
 }
 
 
