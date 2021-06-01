@@ -125,13 +125,15 @@ display: flex;
 /*-------------------------END LOGO-TITLE-AUTHOR-SEARCH--------------------*/
 
 /*------------------------START NAVVVV-------------------------------------*/
+.button-hidde {
+    display: none;
+}
 nav{
     padding: 0%;
     margin: 0%;
 }
 .nav-list{
     display: flex;
-    box-sizing: border-box;
     width: 100%;
     height: 4vw;
     background-color: var(--rosa);
@@ -473,7 +475,7 @@ height: auto;
 }
 }
 
-
+/*-----------A PARTIR DE AQUI QUIERO BOTON ---------------*/
 @media (max-width:640px){
     body{
         background-color: rgb(37, 241, 71);
@@ -500,7 +502,94 @@ height: auto;
     .button-search{
         padding: 0;
     }
+    /*-----------------BUTTON HIDDE + NAV--------------------*/
+    .button-hidde {
+        display: block;
+    }
+    .nav-list {
+        display: none;
+    }
+    .modificar {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        background-color: var(--rosa);
+        list-style: none;
+        margin: 0%;
+        padding: 0%;
+        border: thick double white;
+    }
+    .nav-list-item{
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 8vw;
+        min-height: 42px;
+        border: 1px solid black;
+        justify-content: center;  
+        align-items: center;    
+    }   
+    /*NO PUEDO QUITARLE EL HOVER PARA MOBILE¿O NO ES NECESARIO?*/
+    .nav-list-item-link{
+        font: 4.5vw arial;
+        text-decoration: none;
+        color: black;
+        /* display: block; con esto ocuparía todo el espacio disponible el focus, pero no me gusta*/
+    }
+    
+    .nav-list-item-link:focus{/*funciona*/
+    border-radius: 2vw;
+    padding: 1.4vw 2vw;
+    font-size: 4.7vw;
+    } 
+    
+    .submenu{
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1.5s;
+        list-style: none;
+        margin: 0%;
+        padding: 0%;
+        width: 100%;
+        position: absolute;
+        top: 8vw;
+        background-color:var(--azul);
+        z-index: 2;
+        
+    }
+ 
+    .nav-list-item:focus-within .submenu{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .submenu-list-item{
+    height: 8vw;
+    min-height: 42px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: thick double black;
+    }
+    
+    .submenu-list-item-link{
+        font: 4.5vw arial;
+        color: white;
+        text-decoration: none;
+        
+    }
+  
+    .submenu-list-item-link:focus{
+        border-radius: 20px;
+        padding: 1.5vw 2vw;
+        font-size: 4.7vw;
+        color: black;
+    }
 }
+/*-----------------END BUTTON HIDDE + NAV--------------------*/
+
 @media (max-width:370px){
     body{
         background-color: rgb(255, 255, 255);
@@ -516,6 +605,6 @@ a desbordar con %. Deforma todo. "ocupa espacio libre" y corre elementos. LINEA 
 2)subir place holder al tipear..como se hace?LINEA 80
 
 3) Input-search: no puedo cambiarle color fondo (gradiente)cuando clickeo. ¿con una class sobre form?
-
+4)NO PUEDO QUITARLE EL HOVER PARA MOBILE A .nav-list-item-link ¿O NO ES NECESARIO?
 5) clip-path probar
 */
