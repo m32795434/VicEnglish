@@ -9,9 +9,7 @@
 
 }
 
-a{
-    font: 1.5vw arial;
-}
+
 *:focus {
     background: linear-gradient(var(--cielo) 50%, white);}
 
@@ -29,7 +27,7 @@ a{
 .sr-only:focus {
     /* background-color: #ACC8E5; */
     display: flex;
-    height: 4vw;
+    height: 40px;
     width:  100%;
     position: relative;
     clip: auto;
@@ -40,6 +38,7 @@ a{
     text-decoration: underline;
 }
 .skiptext{
+    font: 20px arial;
     text-align: center;
     align-self: center;
     color: black;
@@ -61,25 +60,31 @@ body{
 
     }
 /*-------------------------LOGO-TITLE-AUTHOR-SEARCH-----------------------------------------*/
-
+/*----------------LOGo-TITLE-------------*/
+/* .logo-title{
+display: flex;
+} */
+/*----------------LOGo-TITLE-------------*/
 .log-title-srch{/*FLEX CONTENEDOR DEL LOGO, TIT, Y FORM SEARCH*/
     background: linear-gradient(.25turn, var(--azul)70%, white);
     display: flex;
     justify-content: space-between;
     align-content: stretch;
     align-items: flex-end;
-    height: 8.5vw;
-    overflow: hidden;
-    }
-
+    height: auto;
+        }
+/***************LOGO*****************************/
 .logo-image{
-    height: 8vw;
+    width: 22vw;
+    min-width: 100px;
+    height: auto;
+    margin-top: 2px;
+
 }
 /*------------END LOGO--------------*/
 /*------------TITLE----------------*/
 .title{/*div contenedor de h1 y h2*/
     display: flex;
-    color: white;
 }
 .title h1{
     font-size: 3vw;
@@ -90,17 +95,20 @@ body{
     font-family: "Dancing Script", cursive;
     margin-left: 1vw;
 }
+.title a{
+    color: white;
+    text-decoration: none;
+}
 /*------------END TITLE------------*/
 /*------------SEARCH FORM--------*/
 
 .input-search{
     width: 20vw;
-    height: 3vw;
-    display: inline-block;
+    min-width: 210px;
+    height: auto;
     border: 3px solid black;
     border-radius: 5px;
-    font-size: 2vw;
-    /* background-color: wheat; */
+    font-size: 20px;
 }
 
 .button-search{
@@ -108,7 +116,8 @@ body{
     border: none;
 }
 .button-search-img{
-    width: 2vw;
+    width: 30px;
+    height: auto;
     cursor: pointer;
 }
 /*-----------END SEARCH FORM--------*/
@@ -141,6 +150,7 @@ nav{
 }   
 
 .nav-list-item-link{
+    font: 1.5vw arial;
     text-decoration: none;
     color: black;
     /* display: block; con esto ocuparía todo el espacio disponible el focus, pero no me gusta*/
@@ -186,6 +196,7 @@ border-bottom: thick double black;
 }
 
 .submenu-list-item-link{
+    font: 1.5vw arial;
     color: white;
     text-decoration: none;
     
@@ -215,7 +226,7 @@ border-bottom: thick double black;
 background-clip/background-color/background-origin/background-repeat*/
     background: url(images/01.jpg) fixed;
     background-size:cover;
-    min-height: 900px;
+    height: auto;
     width: 100%;
     /* margin: 0 auto; */
 }
@@ -223,7 +234,7 @@ background-clip/background-color/background-origin/background-repeat*/
 #block-img2{
     background: url(images/02.jpg) fixed;
     background-size: cover;
-    min-height: 900px;
+    height: auto;
     width: 100%;
 }
 
@@ -231,7 +242,7 @@ background-clip/background-color/background-origin/background-repeat*/
 #block-img3{
     background: url(images/03.jpg) fixed;
     background-size: cover;
-    min-height: 900px;
+    height: auto;
     width: 100%;
 }
 
@@ -421,9 +432,6 @@ height: auto;
     .nav-list-item-link{
         font-size: 2VW;
     }
-    .submenu{
-        width: 120%;
-    }
     .submenu-list-item-link{
         font-size: 1.75vw;
     }
@@ -436,19 +444,63 @@ height: auto;
         font-size: 1.5vw;
     }
 }
-/*----------------------------HASTA AQUIIIIIIIIIIIIII GOOD------------------------------*/
+
 @media (max-width:900px){
     body{
         background-color: rgb(243, 13, 232);
-}}
+    }
+    
+    .title{
+        flex-direction: column;
+        margin-bottom: 1.5vw;
+    }
+    .title h1{
+        font-size: 25px;
+        margin: 0;
+    }
+    .title h2{ 
+        font-size:20px;
+        margin: 0;
+    }       
+}
+
+
+
+
 @media (max-width:767px){
     body{
         background-color: rgb(191, 233, 41);
-}}
+}
+}
+
+
 @media (max-width:640px){
     body{
         background-color: rgb(37, 241, 71);
-}}
+    }
+    #hide-logo{
+        display: none;
+        }
+    .title{
+        margin-bottom: 1.5vw;
+    }
+    
+    .input-search{
+        width: 40vw;
+        min-width: 145px;
+        height: auto;
+        font-size: 16px;
+    
+    }
+    .button-search-img{
+        width: 25px;
+        height: auto;
+        margin-right: 5px;
+    }
+    .button-search{
+        padding: 0;
+    }
+}
 @media (max-width:370px){
     body{
         background-color: rgb(255, 255, 255);
