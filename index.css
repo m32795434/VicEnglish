@@ -62,9 +62,7 @@ body{
     }
 /*-------------------------LOGO-TITLE-AUTHOR-SEARCH-----------------------------------------*/
 /*----------------LOGo-TITLE-------------*/
-/* .logo-title{
-display: flex;
-} */
+
 /*----------------LOGo-TITLE-------------*/
 .log-title-srch{/*FLEX CONTENEDOR DEL LOGO, TIT, Y FORM SEARCH*/
     background: linear-gradient(.25turn, var(--azul)70%, white);
@@ -126,7 +124,7 @@ display: flex;
 /*-------------------------END LOGO-TITLE-AUTHOR-SEARCH--------------------*/
 
 /*------------------------START NAVVVV-------------------------------------*/
-.button-hidde {
+.button-hamb {
     display: none;
     background: none;
     
@@ -497,11 +495,11 @@ height: auto;
     /* .header{
         width: 98.3%;
     } */
-    .button-hidde{
+    .button-hamb{
         width: 12vw;
         height: auto;
     }
-    #button-menu-img{
+    #button-hamb-img{
         width: 8vw;
         height: auto;
     }
@@ -518,10 +516,9 @@ height: auto;
     #block-img1,#block-img2, #block-img3  {
         height: 120vw;
     }
-
-    #hide-logo{
-        display: none;
-        }
+    .logo-anchor{
+    display: none;
+    }
     .title{
         margin-bottom: 1.5vw;
     }
@@ -542,7 +539,7 @@ height: auto;
         padding: 0;
     }
     /*-----------------BUTTON HIDDE + NAV--------------------*/
-    .button-hidde {
+    .button-hamb {
         display: block;
     }
     .nav-list {
@@ -631,18 +628,40 @@ height: auto;
 
 @media (max-width:370px){
     body{
-        background-color: rgb(255, 255, 255);
+        background-color: var(--rojo);
         margin: 0;
         padding: 0;
     }
-    .button-hidde{
-        width: 12vw;
+    .main{/*DEBO CORREJIR HEADER EN LOW END PARA QUE NO OCUPE TANTO ESPACIO, MAIN EN TOP*/
+        top: 45vw;
+    }
+    .log-title-srch{
+        display: block;
+        width: 100%;
+    }
+    .log-title-srch form{
+        text-align: right;
+    }
+    .button-hamb{
+        width: 15vw;
         height: auto;
     }
-    #button-menu-img{
-        width: 5vw;
+    #button-hamb-img{
+        width: 9vw;
         height: auto;
     }
+    
+    .text{
+        font-size: 5.5vw; 
+        padding: 0.2vw; 
+    }
+    #block-img3  {
+        height: 130vw;
+    }
+}   .footer{
+    top: 39vw;
+    /* height: 200px; */
+    display: block;
 }
 
 
@@ -656,4 +675,5 @@ a desbordar con %. Deforma todo. "ocupa espacio libre" y corre elementos. LINEA 
 4)NO PUEDO QUITARLE EL HOVER PARA MOBILE A .nav-list-item-link ¿O NO ES NECESARIO?
 5) clip-path probar
 6)correjir dsitancia imagen menu, del borde boton.
+7)DEBO CORREJIR HEADER EN LOW END PARA QUE NO OCUPE TANTO ESPACIO, MAIN EN TOP
 */
