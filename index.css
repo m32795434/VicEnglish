@@ -47,15 +47,16 @@
 /* ------------------------END screen readers only ----------------------*/
 
 body{
+    /* width: 100%; */
     background-color:var(--rojo);
-    margin:0 1vw 1vw 1vw;
+    margin:0;
     padding: 0;
     padding-bottom: 15vw; /*compensa el TOP:15VW de MAIN Y FOOTER*/
 }
 .header{
     position: fixed;
     z-index: 1;
-    width: 96.5vw;
+    width: 100%;
     box-sizing: border-box;
 
     }
@@ -127,6 +128,8 @@ display: flex;
 /*------------------------START NAVVVV-------------------------------------*/
 .button-hidde {
     display: none;
+    background: none;
+    
 }
 nav{
     padding: 0%;
@@ -217,7 +220,7 @@ border-bottom: thick double black;
     position: relative;/*hacer relative para no afectar la posicion de otros elemetos*/
     top: 15vw;
     height: auto;
-    width: 96.5vw;
+    /* width: 100%; */
     margin-bottom: 40px;
     z-index: 0;
 }
@@ -228,7 +231,7 @@ border-bottom: thick double black;
 background-clip/background-color/background-origin/background-repeat*/
     background: url(images/01.jpg) fixed;
     background-size:cover;
-    height: auto;
+    height: 100vw;
     width: 100%;
     /* margin: 0 auto; */
 }
@@ -236,7 +239,7 @@ background-clip/background-color/background-origin/background-repeat*/
 #block-img2{
     background: url(images/02.jpg) fixed;
     background-size: cover;
-    height: auto;
+    height: 100vw;
     width: 100%;
 }
 
@@ -244,14 +247,14 @@ background-clip/background-color/background-origin/background-repeat*/
 #block-img3{
     background: url(images/03.jpg) fixed;
     background-size: cover;
-    height: auto;
+    height: 100vw;
     width: 100%;
 }
 
 .block1{/*para divs padres que contienen los div hijos, con h2 y p, asi puedo 
     hacerle padding, desde el div hijo*/
-    background-color: rgba(0,0,0,0.7);
-    margin-bottom: 5vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 10vw;
 
 }
 
@@ -259,13 +262,13 @@ background-clip/background-color/background-origin/background-repeat*/
 .text {/*para el div hijo, de la clase de abajo*/
     color: white;
     text-align: center;
-    padding: 5vw;
-    font-size: 2vw;
+    padding: 10vw;
+    font-size: 25px;
 }
 
 .text h1{
     color: burlywood;
-    font-size: 4vw;
+    font-size: 48px;
     text-shadow: 1px 1px 1px white;/* offset-x | offset-y | blur-radius | color */
     margin-top: 0;
     border-radius: 5px;
@@ -275,7 +278,7 @@ background-clip/background-color/background-origin/background-repeat*/
 
 .text h2{
     color: burlywood;
-    font-size: 4vw;
+    font-size: 53px;
     text-shadow: 1px 1px 1px white;/* offset-x | offset-y | blur-radius | color */
     margin-top: 0;
     opacity: 80%;
@@ -288,7 +291,7 @@ background-clip/background-color/background-origin/background-repeat*/
     position: relative;/*conviene relative! sino me saca del flujo del doc*/
     top: 15vw;
     height: auto;
-    width: 96.5vw;
+    /* width: 100%; */
     /* margin-bottom: 100px;  */
     display: grid;
     grid-template: auto / 40% 20% 40%;
@@ -404,22 +407,28 @@ height: auto;
     body{
         background-color: black;
     }
-        .nav-list-item-link{
-            font-size: 1.7VW;
-        }
-        .nav-list-item-link:focus{
-            padding: 1.1vw 2vw;
-            font-size: 1.5vw;
-        } 
-        .submenu-list-item-link:focus{
-            padding: 1.1vw 2vw;
-            font-size: 1.4vw;
-        }
+    /* .header{
+        width: 99.1%;
+    } */
+    .nav-list-item-link{
+        font-size: 1.7VW;
+    }
+    .nav-list-item-link:focus{
+        padding: 1.1vw 2vw;
+        font-size: 1.5vw;
+    } 
+    .submenu-list-item-link:focus{
+        padding: 1.1vw 2vw;
+        font-size: 1.4vw;
+    }
 }
 @media (max-width:1023px){
     body{
         background-color: rgb(61, 199, 241);
         }
+    .text {
+        padding: 5vw;
+    }
     .nav-list{
             height: 5vw;
         }
@@ -451,7 +460,9 @@ height: auto;
     body{
         background-color: rgb(243, 13, 232);
     }
-    
+    /* .header{
+        width: 98.8%;
+    } */
     .title{
         flex-direction: column;
         margin-bottom: 1.5vw;
@@ -472,7 +483,10 @@ height: auto;
 @media (max-width:767px){
     body{
         background-color: rgb(191, 233, 41);
-}
+    }
+    .text {
+        padding: 2vw;
+    }
 }
 
 /*-----------A PARTIR DE AQUI QUIERO BOTON ---------------*/
@@ -480,6 +494,31 @@ height: auto;
     body{
         background-color: rgb(37, 241, 71);
     }
+    /* .header{
+        width: 98.3%;
+    } */
+    .button-hidde{
+        width: 12vw;
+        height: auto;
+    }
+    #button-menu-img{
+        width: 8vw;
+        height: auto;
+    }
+    .text {
+        /* padding:1vw .3vw .3vw .3vw; */
+        font-size: 4.5vw;
+    }
+    .text h1{
+    font-size: 8vw;
+    }
+    .text h2{
+    font-size: 7vw;
+    }
+    #block-img1,#block-img2, #block-img3  {
+        height: 120vw;
+    }
+
     #hide-logo{
         display: none;
         }
@@ -595,7 +634,16 @@ height: auto;
         background-color: rgb(255, 255, 255);
         margin: 0;
         padding: 0;
-}}
+    }
+    .button-hidde{
+        width: 12vw;
+        height: auto;
+    }
+    #button-menu-img{
+        width: 5vw;
+        height: auto;
+    }
+}
 
 
 
@@ -607,4 +655,5 @@ a desbordar con %. Deforma todo. "ocupa espacio libre" y corre elementos. LINEA 
 3) Input-search: no puedo cambiarle color fondo (gradiente)cuando clickeo. ¿con una class sobre form?
 4)NO PUEDO QUITARLE EL HOVER PARA MOBILE A .nav-list-item-link ¿O NO ES NECESARIO?
 5) clip-path probar
+6)correjir dsitancia imagen menu, del borde boton.
 */
