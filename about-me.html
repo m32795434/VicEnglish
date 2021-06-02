@@ -13,12 +13,12 @@
 <body>   
     <header class="header"><!--FIXED!!(0,0) es el mismo del body-->
         <!-- skip navigation direct to content (link to main)-->    
-        <a href="#main" class="sr-only"><p class="skiptext">Ir al contenido principal</p></a>
-        <div class="log-title-srch"> <!--logo, nombre autor, titulo principal, boton busqueda  -->
+        <a href="#main" class="sr-only"><p class="skiptext">Ir al contenido principal</p></a><!--FLEX-->
+        <div class="log-title-srch"> <!--FLEX logo, nombre autor, titulo principal, boton busqueda  -->
             <a href="index.html" class="logo-anchor"><img src="images/logo24.png" alt="go to home" class="logo-image"></a>
-            <DIV class="title">
-                <h1>Clases de Inglés</h1>
-                <h2> con Vicky González</h2>
+            <DIV class="title"><!--FLEX-->
+                <a href="index.html"><h1>Clases de Inglés</h1></a>
+                <a href="index.html"><h2> con Vicky González</h2></a>
             </DIV>
             <form action="search.js" >
                 <input  class="input-search" type="search" placeholder="Buscar en el sitio..." >
@@ -26,14 +26,17 @@
                 <button type="submit" class="button-search"><img src="images\lupa8.png" alt="search" class="button-search-img"></button>
             </form>
         </div>
+        <button class="button-hamb" id="boton">
+            <img src="images/menu1.png" alt="menu" id="button-hamb-img">
+        </button>
         <nav> <!---->
-            <ul class="nav-list"> <!--flex NAVEGACIÓN-->
+            <ul class="nav-list" id="nav"> <!--FLEX NAVEGACIÓN-->
                 <li class="nav-list-item">
-                    <a href="about-me.html" class="nav-list-item-link">Sobre Mí</a>
+                    <a href="#" class="nav-list-item-link">Sobre Mí</a>
                     <ul class="submenu">
-                        <li class="submenu-list-item"><a href="#whoiam" class="submenu-list-item-link">¿Quien Soy?</a></li>
-                        <li class="submenu-list-item"><a href="#training" class="submenu-list-item-link">Formación Universitaria y Posgrados</a></li>
-                        <li class="submenu-list-item"><a href="#career" class="submenu-list-item-link">Carrera Profesional</a></li>
+                        <li class="submenu-list-item"><a href="about-me.html" class="submenu-list-item-link">¿Quien Soy?</a></li>
+                        <li class="submenu-list-item"><a href="about-me.html#training" class="submenu-list-item-link">Formación Universitaria y Posgrados</a></li>
+                        <li class="submenu-list-item"><a href="about-me.html#career" class="submenu-list-item-link">Carrera Profesional</a></li>
                     </ul>
                 </li>
                 <li class="nav-list-item">
@@ -131,6 +134,6 @@
              
         </div>
     </footer>
-    
+    <script src="ham-button.js"></script>
 </body>
 </html>

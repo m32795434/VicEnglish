@@ -25,7 +25,6 @@
     white-space: nowrap;
 }
 .sr-only:focus {
-    /* background-color: #ACC8E5; */
     display: flex;
     height: 40px;
     width:  100%;
@@ -47,7 +46,6 @@
 /* ------------------------END screen readers only ----------------------*/
 
 body{
-    /* width: 100%; */
     background-color:var(--rojo);
     margin:0;
     padding: 0;
@@ -289,8 +287,6 @@ background-clip/background-color/background-origin/background-repeat*/
     position: relative;/*conviene relative! sino me saca del flujo del doc*/
     top: 15vw;
     height: auto;
-    /* width: 100%; */
-    /* margin-bottom: 100px;  */
     display: grid;
     grid-template: auto / 40% 20% 40%;
     box-sizing: border-box;
@@ -341,7 +337,15 @@ height: auto;
 
 /*-------------------------------------END FOOTER---------------------------------------*/
 
+
+
 /*---------------------------CONTACT------------------------------------------------*/
+#contact-block-img2{
+    background: url(images/02.jpg) fixed;
+    background-size: cover;
+    height: 80vw;
+    width: 100%;
+}
 
 .contact-text {
     text-align: left;
@@ -371,11 +375,12 @@ height: auto;
 #coment{
     width: 50vw;
     height: 15vw;
+    min-width: 190px;
 }
 
 .contact-large{
     width: 25vw;
-    min-width: 147px;
+    min-width: 190px;
 }
 .buttoms-contact{
     border-radius: 10px;
@@ -399,15 +404,16 @@ height: auto;
 }
 
 
-/*----------------------------------MEDIASSSSSSSSSQQQQQ----------------------------*/
+/*----------------------------------MEDIA       QUERYSSSSSSSSSSS----------------------------*/
+
 /*-------------------PC HIGH END PARA FUTURO CERCANO----------*/
 @media (max-width:1200px){
-    body{
+    /* body{
         background-color: black;
-    }
-    /* .header{
-        width: 99.1%;
     } */
+    #contact-block-img2{
+        height: 85vw;
+    }
     .nav-list-item-link{
         font-size: 1.7VW;
     }
@@ -421,9 +427,12 @@ height: auto;
     }
 }
 @media (max-width:1023px){
-    body{
+    /* body{
         background-color: rgb(61, 199, 241);
-        }
+        } */
+    #contact-block-img2{
+        height: 90vw;
+    }
     .text {
         padding: 5vw;
     }
@@ -455,12 +464,13 @@ height: auto;
 }
 
 @media (max-width:900px){
-    body{
+    /* body{
         background-color: rgb(243, 13, 232);
-    }
-    /* .header{
-        width: 98.8%;
     } */
+    #contact-block-img2{
+        height: 110vw;
+    }
+
     .title{
         flex-direction: column;
         margin-bottom: 1.5vw;
@@ -472,29 +482,72 @@ height: auto;
     .title h2{ 
         font-size:20px;
         margin: 0;
-    }       
+    }    
+    .submenu-list-item{
+    height: 5vw;
+    }
+    .nav-list{
+    height: 6vw;
+    }
+    .nav-list-item-link{
+        font-size: 2.2VW;
+    }
+    .submenu-list-item-link{
+        font-size: 2.2vw;
+    }
+    .nav-list-item-link:focus{
+        font-size: 2.4vw;
+    } 
+    .submenu-list-item-link:focus{
+        padding: 1vw 2vw;
+        font-size: 2.4vw;
+    }   
+    
 }
 
 
 
 
 @media (max-width:767px){
-    body{
+    /* body{
         background-color: rgb(191, 233, 41);
-    }
+    } */
     .text {
         padding: 2vw;
     }
+    .main{
+        top: 18vw;
+    }
+    .submenu-list-item{
+        height: 6.5vw;
+        }
+        .nav-list{
+        height: 7vw;
+        }
+        .nav-list-item-link{
+            font-size: 2.5VW;
+        }
+        .submenu-list-item-link{
+            font-size: 2.5vw;
+        }
+        .nav-list-item-link:focus{
+            font-size: 2.7vw;
+            padding: 1.6vw 2vw;
+        } 
+        .submenu-list-item-link:focus{
+            padding: 1vw 2vw;
+            font-size: 2.7vw;
+        }
 }
 
 /*-----------A PARTIR DE AQUI QUIERO BOTON ---------------*/
 @media (max-width:640px){
-    body{
+    /* body{
         background-color: rgb(37, 241, 71);
-    }
-    /* .header{
-        width: 98.3%;
     } */
+    #contact-block-img2{
+        height: 170vw;
+    }
     .button-hamb{
         width: 12vw;
         height: auto;
@@ -548,7 +601,7 @@ height: auto;
     .modificar {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 97%;
         height: auto;
         background-color: var(--rosa);
         list-style: none;
@@ -560,8 +613,8 @@ height: auto;
         position: relative;
         display: flex;
         width: 100%;
-        height: 8vw;
-        min-height: 42px;
+        height: 10vw;
+        /* min-height: 42px; */
         border: 1px solid black;
         justify-content: center;  
         align-items: center;    
@@ -575,8 +628,8 @@ height: auto;
     }
     
     .nav-list-item-link:focus{/*funciona*/
-    border-radius: 2vw;
-    padding: 1.4vw 2vw;
+    border-radius: 3vw;
+    padding: 1.8vw 2vw;
     font-size: 4.7vw;
     } 
     
@@ -601,8 +654,7 @@ height: auto;
     }
     
     .submenu-list-item{
-    height: 8vw;
-    min-height: 42px;
+    height: 10vw;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -619,20 +671,22 @@ height: auto;
   
     .submenu-list-item-link:focus{
         border-radius: 20px;
-        padding: 1.5vw 2vw;
+        padding: 1.9vw 2vw;
         font-size: 4.7vw;
         color: black;
     }
+    .footer{
+        display: block;
+}   
 }
 /*-----------------END BUTTON HIDDE + NAV--------------------*/
 
 @media (max-width:370px){
-    body{
+    /* body{
         background-color: var(--rojo);
-        margin: 0;
-        padding: 0;
-    }
-    .main{/*DEBO CORREJIR HEADER EN LOW END PARA QUE NO OCUPE TANTO ESPACIO, MAIN EN TOP*/
+    } */
+    
+    .main{
         top: 45vw;
     }
     .log-title-srch{
@@ -651,6 +705,35 @@ height: auto;
         height: auto;
     }
     
+    
+    .nav-list-item{
+        height: 15vw;   
+    }   
+    
+    .nav-list-item-link{
+        font-size: 6vw;
+        
+    }
+    
+    .nav-list-item-link:focus{/*funciona*/
+    border-radius: 5vw;
+    padding: 4vw 2vw;
+    font-size: 6.2vw;
+    } 
+    
+    .submenu-list-item{
+    height: 15vw;
+    }
+    .submenu-list-item-link{
+        font-size: 6vw;
+    }
+
+   .submenu-list-item-link:focus{
+        padding: 4vw 2vw;
+        font-size: 6.2vw;
+    }
+
+/*-------------------------------MAIN---------------------------*/
     .text{
         font-size: 5.5vw; 
         padding: 0.2vw; 
@@ -658,22 +741,48 @@ height: auto;
     #block-img3  {
         height: 130vw;
     }
-}   .footer{
-    top: 39vw;
-    /* height: 200px; */
-    display: block;
+/*------------------------------- END MAIN---------------------------*/
+/*-------------------------------FOOTER---------------------------*/
+    .footer{
+        top: 39vw;
+    }   
+
+    /*-------------------------CONTACT------------------*/
+    #contact-block-img2{
+        height: 200vw;
+    }   
+    .contact-text a{
+        font-size: 15px;
+    }
+    /*------------------------- END CONTACT------------------*/
+
+    /*-------------------------END             MEDIA          QUERYSSS------------------*/
 }
 
 
 
-/*1)por que en :focus, usando valores con vh, si hay desborde,se comporta distinto
-a desbordar con %. Deforma todo. "ocupa espacio libre" y corre elementos. LINEA 143
 
-2)subir place holder al tipear..como se hace?LINEA 80
+/*A MODO DE BIBLIOGRAFÍA:
+1)  (((ADAPTADO a mi sitio incluyendo FLEX))) menú desplegable con transición. 
+Código base para la adaptacion, obtenido de:
+Link(https://www.youtube.com/watch?v=3mdQuS8VHKg).
+-Slide automático, cortesía de J&G Proyectos Web.-Youtube.
+Link(https://www.youtube.com/watch?v=oP5472drWiI)((SECCION NO IMPLEMENTADA EN ESTA ETAPA))
+-Código base para el Scroll parralaX, cortesía de Noel Flores; Compañera y amiga del turno mañana.
+El código lo he adaptado a mi sitio.
 
-3) Input-search: no puedo cambiarle color fondo (gradiente)cuando clickeo. ¿con una class sobre form?
-4)NO PUEDO QUITARLE EL HOVER PARA MOBILE A .nav-list-item-link ¿O NO ES NECESARIO?
-5) clip-path probar
-6)correjir dsitancia imagen menu, del borde boton.
-7)DEBO CORREJIR HEADER EN LOW END PARA QUE NO OCUPE TANTO ESPACIO, MAIN EN TOP
+OTROS RECURSOS:
+Imagenes obtenidas sin licencia de Internet. Debo aún editar unas propias.
+Quedan aún muchos detalles por resolver, como colores, y :focus que se comporten en todos los encales de igual forma.
+Quedan por resolver temas accesibilidad.
+Queda por incorporar Slide en sección CURSOS/CLASES.
+Animaciones, audio, video. 
+Entre Otros.
+
+***ALGUNAS COSAS POR RESOLVER.***
+
+1)subir place holder al tipear.
+2) Input-search:cambiar color fondo (gradiente)cuando clickeo. ¿con una class sobre form?
+3)NO PUEDO QUITARLE EL HOVER PARA MOBILE A .nav-list-item-link ¿O NO ES NECESARIO?
+
 */
