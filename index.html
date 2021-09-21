@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <!-- pongamos un icono<link rel="shortcut icon" href="favico.png"> -->
     <meta charset="UTF-8">
@@ -7,46 +8,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"
+        rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
-<body>   
-    <header class="header"><!--FIXED!!(0,0) es el mismo del body-->
-        <!-- skip navigation direct to content (link to main)-->    
-        <a href="#main" class="sr-only"><p class="skiptext">Ir al contenido principal</p></a><!--FLEX-->
-        <div class="log-title-srch"> <!--FLEX logo, nombre autor, titulo principal, boton busqueda  -->
-            <a href="index.html" class="logo-anchor"><img src="images/logo24.png" alt="go to home" class="logo-image"></a>
-            <DIV class="title"><!--FLEX-->
-                <a href="index.html"><h1>Clases de Inglés</h1></a>
-                <a href="index.html"><h2> con Vicky González</h2></a>
+
+<body>
+    <header class="header">
+        <!--FIXED!!(0,0) es el mismo del body-->
+        <!-- skip navigation direct to content (link to main)-->
+        <a href="#main" class="sr-only">
+            <p class="skiptext">Ir al contenido principal</p>
+        </a>
+        <!--FLEX-->
+        <div class="log-title-srch">
+            <!--FLEX logo, nombre autor, titulo principal, boton busqueda  -->
+            <a href="index.html" class="logo-anchor"><img src="images/logo24.png" alt="go to home"
+                    class="logo-image"></a>
+            <DIV class="title">
+                <!--FLEX-->
+                <a href="index.html">
+                    <h1>Clases de Inglés</h1>
+                </a>
+                <a href="index.html">
+                    <h2> con Vicky González</h2>
+                </a>
             </DIV>
-            <form action="search.js" >
-                <input  class="input-search" type="search" placeholder="Buscar en el sitio..." >
+            <form action="search.js">
+                <input class="input-search" type="search" placeholder="Buscar en el sitio...">
                 <!-- <label for=""></label> padre para div y label...position relative y absol-->
-                <button type="submit" class="button-search"><img src="images\lupa8.png" alt="search" class="button-search-img"></button>
+                <button type="submit" class="button-search"><img src="images\lupa8.png" alt="search"
+                        class="button-search-img"></button>
             </form>
         </div>
         <button class="button-hamb" id="boton">
             <img src="images/menu1.png" alt="menu" id="button-hamb-img">
         </button>
-        <nav> <!---->
-            <ul class="nav-list" id="nav"> <!--FLEX NAVEGACIÓN-->
+        <nav>
+            <!---->
+            <ul class="nav-list" id="nav">
+                <!--FLEX NAVEGACIÓN-->
                 <li class="nav-list-item">
                     <a href="#" class="nav-list-item-link">Sobre Mí</a>
                     <ul class="submenu">
-                        <li class="submenu-list-item"><a href="about-me.html" class="submenu-list-item-link">¿Quien Soy?</a></li>
-                        <li class="submenu-list-item"><a href="about-me.html#training" class="submenu-list-item-link">Formación Universitaria y Posgrados</a></li>
-                        <li class="submenu-list-item"><a href="about-me.html#career" class="submenu-list-item-link">Carrera Profesional</a></li>
+                        <li class="submenu-list-item"><a href="about-me.html" class="submenu-list-item-link">¿Quien
+                                Soy?</a></li>
+                        <li class="submenu-list-item"><a href="about-me.html#training"
+                                class="submenu-list-item-link">Formación Universitaria y Posgrados</a></li>
+                        <li class="submenu-list-item"><a href="about-me.html#career"
+                                class="submenu-list-item-link">Carrera Profesional</a></li>
                     </ul>
                 </li>
                 <li class="nav-list-item">
                     <a href="#" class="nav-list-item-link">Cursos/Clases</a>
-                    <ul class="submenu"> <!---------HIDE----------->
-                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Exámenes Internacionales</a></li>
-                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Clases de Apoyo Escolar</a></li>
-                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Apoyo a Alumnos del Profesorado</a></li>
-                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Clases de Conversación</a></li>
-                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Inglés con Fines Específicos</a></li>
+                    <ul class="submenu">
+                        <!---------HIDE----------->
+                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Exámenes
+                                Internacionales</a></li>
+                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Clases de Apoyo
+                                Escolar</a></li>
+                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Apoyo a Alumnos del
+                                Profesorado</a></li>
+                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Clases de
+                                Conversación</a></li>
+                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Inglés con Fines
+                                Específicos</a></li>
                         <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Inglés General</a></li>
                     </ul>
                 </li>
@@ -59,102 +85,109 @@
             </ul>
         </nav>
     </header>
-    <main id="main" class="main"> 
+    <main id="main" class="main">
         <!--MODELO SCROLL CORTESÍA DE UNA COMPAÑERA TURNO MAÑÁNA-->
-        <div id="block-img1" data-speed="1"><!--AQUI IMAGEN 1 FIJA + SCROLL TITULO PRINCIPAL-->
-            <div class="text"> 
+        <div id="block-img1" data-speed="1">
+            <!--AQUI IMAGEN 1 FIJA + SCROLL TITULO PRINCIPAL-->
+            <div class="text">
                 <h1>¿POR QUÉ ESTUDIAR INGLÉS?</h1>
             </div>
-            <div class="block1"><!---->
+            <div class="block1">
+                <!---->
                 <div class="text">
                     <h2>Motivo-titulo-1</h2>
                     <p>
                         Harry Potter se ha quedado huérfano y vive en casa de sus abominables
                         tíos y del insoportable primo Dudley. Harry se siente muy triste y solo,
-                        hasta que un buen día recibe una carta que cambiará su vida para 
-                        siempre.  
+                        hasta que un buen día recibe una carta que cambiará su vida para
+                        siempre.
                     </p>
                 </div>
             </div>
-        </div><!--FIN BLOQUE IMAGEN 1-->
+        </div>
+        <!--FIN BLOQUE IMAGEN 1-->
 
-        
 
-        <div id="block-img2" data-speed="1" >
-            <div class="block1"> 
+
+        <div id="block-img2" data-speed="1">
+            <div class="block1">
                 <div class="text">
                     <h2>Motivo-titulo-2</h2>
                     <p>
                         A partir de ese
                         momento, la suerte de Harry da un vuelco espectacular. En esa escuela
                         tan especial aprenderá encantamientos, trucos fabulosos y tácticas de
-                        defensa contra las malas artes. 
+                        defensa contra las malas artes.
                     </p>
-                
+
                 </div>
             </div>
             <div class="block1">
-                        <div class="text">
-                            <h2>Motivo-titulo-3</h2>
-                            <p>
-                                Se convertirá en el campeón escolar de
-                                quidditch, especie de fútbol aéreo que se juega montado sobre escobas,
-                                y se hará un puñado de buenos amigos... aunque también algunos
-                                temibles enemigos. 
-                            </p>
-                        </div>
+                <div class="text">
+                    <h2>Motivo-titulo-3</h2>
+                    <p>
+                        Se convertirá en el campeón escolar de
+                        quidditch, especie de fútbol aéreo que se juega montado sobre escobas,
+                        y se hará un puñado de buenos amigos... aunque también algunos
+                        temibles enemigos.
+                    </p>
+                </div>
             </div>
         </div>
 
-    
-        <div id="block-img3" data-speed="1" >
-            <div class="block1"> 
+
+        <div id="block-img3" data-speed="1">
+            <div class="block1">
                 <div class="text">
                     <h2>Motivo-titulo-4</h2>
                     <p>
                         Pero sobre todo, conocerá los secretos que le
-                        permitirán cumplir con su destino. Pues, aunque no lo parezca a primera 
+                        permitirán cumplir con su destino. Pues, aunque no lo parezca a primera
                         vista, Harry no es un chico común y corriente. ¡Es un mago!
 
                     </p>
                 </div>
             </div>
-            <div class="block1"> 
+            <div class="block1">
                 <div class="text">
                     <h2>Motivo-titulo-5</h2>
                     <p>
                         El señor y la señora Dursley, que vivían en el número 4 de Privet Drive,
-                        estaban orgullosos de decir que eran muy normales, afortunadamente. Eran las 
+                        estaban orgullosos de decir que eran muy normales, afortunadamente. Eran las
                         últimas personas que se esperaría encontrar relacionadas con algo extraño o
                         misterioso, porque no estaban para tales tonterías.
                     </p>
                 </div>
             </div>
-        </div>  
-        
-        
+        </div>
+
+
     </main>
-    <footer class="footer"><!--GRID-->
+    <footer class="footer">
+        <!--GRID-->
         <div class="footer-copy">
             &copy; Clases de Inglés
-            
+
         </div>
-        <div class="footer-contact"><!--FLEX-->
+        <div class="footer-contact">
+            <!--FLEX-->
             <a href="contact.html">Contacto</a>
             <div class="footer-follow">
                 <p>Seguinos en:</p>
-                <a href="#"><img  src="images/instagram.png" alt="instagram"></a>
-                <a href="#"><img class="follow-linkedin"src="images/linkedin.png" alt="linkedin"></a>
+                <a href="#"><img src="images/instagram.png" alt="instagram"></a>
+                <a href="#"><img class="follow-linkedin" src="images/linkedin.png" alt="linkedin"></a>
                 <a href="#"><img class="follow-facebook" src="images/facebook.png" alt="facebook"></a>
             </div>
 
         </div>
-        <div class="footer-credits"><!--FLEX-->
+        <div class="footer-credits">
+            <!--FLEX-->
             <h2>Created by</h2>
             <p>Manuel A. Bravard🧔</p>
-             
+
         </div>
     </footer>
     <script src="ham-button.js"></script>
 </body>
+
 </html>

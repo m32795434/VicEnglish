@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <!-- pongamos un icono<link rel="shortcut icon" href="favico.png"> -->
     <meta charset="UTF-8">
@@ -7,46 +8,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"
+        rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
-<body>   
-    <header class="header"><!--FIXED!!(0,0) es el mismo del body-->
-        <!-- skip navigation direct to content (link to main)-->    
-        <a href="#main" class="sr-only"><p class="skiptext">Ir al contenido principal</p></a><!--FLEX-->
-        <div class="log-title-srch"> <!--FLEX logo, nombre autor, titulo principal, boton busqueda  -->
-            <a href="index.html" class="logo-anchor"><img src="images/logo24.png" alt="go to home" class="logo-image"></a>
-            <DIV class="title"><!--FLEX-->
-                <a href="index.html"><h1>Clases de Inglés</h1></a>
-                <a href="index.html"><h2> con Vicky González</h2></a>
+
+<body>
+    <header class="header">
+        <!--FIXED!!(0,0) es el mismo del body-->
+        <!-- skip navigation direct to content (link to main)-->
+        <a href="#main" class="sr-only">
+            <p class="skiptext">Ir al contenido principal</p>
+        </a>
+        <!--FLEX-->
+        <div class="log-title-srch">
+            <!--FLEX logo, nombre autor, titulo principal, boton busqueda  -->
+            <a href="index.html" class="logo-anchor"><img src="images/logo24.png" alt="go to home"
+                    class="logo-image"></a>
+            <DIV class="title">
+                <!--FLEX-->
+                <a href="index.html">
+                    <h1>Clases de Inglés</h1>
+                </a>
+                <a href="index.html">
+                    <h2> con Vicky González</h2>
+                </a>
             </DIV>
-            <form action="search.js" >
-                <input  class="input-search" type="search" placeholder="Buscar en el sitio..." >
+            <form action="search.js">
+                <input class="input-search" type="search" placeholder="Buscar en el sitio...">
                 <!-- <label for=""></label> padre para div y label...position relative y absol-->
-                <button type="submit" class="button-search"><img src="images\lupa8.png" alt="search" class="button-search-img"></button>
+                <button type="submit" class="button-search"><img src="images\lupa8.png" alt="search"
+                        class="button-search-img"></button>
             </form>
         </div>
         <button class="button-hamb" id="boton">
             <img src="images/menu1.png" alt="menu" id="button-hamb-img">
         </button>
-        <nav> <!---->
-            <ul class="nav-list" id="nav"> <!--FLEX NAVEGACIÓN-->
+        <nav>
+            <!---->
+            <ul class="nav-list" id="nav">
+                <!--FLEX NAVEGACIÓN-->
                 <li class="nav-list-item">
                     <a href="#" class="nav-list-item-link">Sobre Mí</a>
                     <ul class="submenu">
-                        <li class="submenu-list-item"><a href="about-me.html" class="submenu-list-item-link">¿Quien Soy?</a></li>
-                        <li class="submenu-list-item"><a href="about-me.html#training" class="submenu-list-item-link">Formación Universitaria y Posgrados</a></li>
-                        <li class="submenu-list-item"><a href="about-me.html#career" class="submenu-list-item-link">Carrera Profesional</a></li>
+                        <li class="submenu-list-item"><a href="about-me.html" class="submenu-list-item-link">¿Quien
+                                Soy?</a></li>
+                        <li class="submenu-list-item"><a href="about-me.html#training"
+                                class="submenu-list-item-link">Formación Universitaria y Posgrados</a></li>
+                        <li class="submenu-list-item"><a href="about-me.html#career"
+                                class="submenu-list-item-link">Carrera Profesional</a></li>
                     </ul>
                 </li>
                 <li class="nav-list-item">
                     <a href="#" class="nav-list-item-link">Cursos/Clases</a>
-                    <ul class="submenu"> <!---------HIDE----------->
-                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Exámenes Internacionales</a></li>
-                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Clases de Apoyo Escolar</a></li>
-                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Apoyo a Alumnos del Profesorado</a></li>
-                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Clases de Conversación</a></li>
-                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Inglés con Fines Específicos</a></li>
+                    <ul class="submenu">
+                        <!---------HIDE----------->
+                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Exámenes
+                                Internacionales</a></li>
+                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Clases de Apoyo
+                                Escolar</a></li>
+                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Apoyo a Alumnos del
+                                Profesorado</a></li>
+                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Clases de
+                                Conversación</a></li>
+                        <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Inglés con Fines
+                                Específicos</a></li>
                         <li class="submenu-list-item"><a href="#" class="submenu-list-item-link">Inglés General</a></li>
                     </ul>
                 </li>
@@ -59,19 +85,19 @@
             </ul>
         </nav>
     </header>
-    <main id="main" class="main"> 
+    <main id="main" class="main">
         <!--MODELO SCROLL CORTESÍA DE UNA COMPAÑERA TURNO MAÑÁNA-->
-        <div id="contact-block-img2" data-speed="1" >
-            <div class="contact-block1"> 
+        <div id="contact-block-img2" data-speed="1">
+            <div class="contact-block1">
                 <div class="contact-text">
                     <h2>Contacto</h2>
                     <form action="ejemplo.js">
 
-                        <label >
+                        <label>
                             Nombre:
                             <input class="contact-items contact-large" type="text" placeholder="Ingrese aquí su nombre">
                         </label>
-                        <label >
+                        <label>
                             E-mail:
                             <input class="contact-items contact-large" type="email">
                         </label>
@@ -79,7 +105,7 @@
                             Edad:
                             <input class="contact-items" type="number" min="0" max="100">
                         </label>
-                        <label >
+                        <label>
                             País:
                             <input class="contact-items" type="text" list="paises">
                             <datalist id="paises">
@@ -99,7 +125,7 @@
                                 <option>Otro</option>
                             </datalist>
                         </label>
-                        <label >
+                        <label>
                             Comentarios:
                             <textarea class="contact-items" id="coment"></textarea>
                         </label>
@@ -107,7 +133,7 @@
                             <input class="buttoms-contact" type="submit" value="¡Enviar!">
                             <input class="buttoms-contact" type="reset" value="Resetear">
                         </div>
-                        
+
 
                     </form>
                     <!--Cortesía http://www.jordigonzalezboada.com/w3mentor/tema05.php-->
@@ -118,22 +144,22 @@ subject=Consulta%20Clases%20de%20Inglés
 &bcc=micorreo3@dominio.com">¡ O también podés enviarnos un mail !</a>
                 </div>
             </div>
-            
+
         </div>
 
-         
+
     </main>
     <footer class="footer">
         <div class="footer-copy">
             &copy; Clases de Inglés
-            
+
         </div>
         <div class="footer-contact">
             <a href="contact.html">Contacto</a>
             <div class="footer-follow">
                 <p>Seguinos en:</p>
-                <a href="#"><img  src="images/instagram.png" alt="instagram"></a>
-                <a href="#"><img class="follow-linkedin"src="images/linkedin.png" alt="linkedin"></a>
+                <a href="#"><img src="images/instagram.png" alt="instagram"></a>
+                <a href="#"><img class="follow-linkedin" src="images/linkedin.png" alt="linkedin"></a>
                 <a href="#"><img class="follow-facebook" src="images/facebook.png" alt="facebook"></a>
             </div>
 
@@ -141,9 +167,10 @@ subject=Consulta%20Clases%20de%20Inglés
         <div class="footer-credits">
             <h2>Created by</h2>
             <p>Manuel A. Bravard🧔</p>
-             
+
         </div>
     </footer>
     <script src="ham-button.js"></script>
 </body>
+
 </html>
